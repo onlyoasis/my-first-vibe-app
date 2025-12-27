@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Coding 按钮</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+
+    #click-button {
+      padding: 16px 28px;
+      font-size: 24px;
+      border: none;
+      border-radius: 12px;
+      background: #ff8a65;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="click-button">点我</button>
+  <p id="message">你好，Vibe Coding！</p>
+
+  <script>
+    const button = document.getElementById('click-button');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', () => {
+      button.style.backgroundColor = 'green';
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
